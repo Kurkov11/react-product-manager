@@ -1,0 +1,52 @@
+.sidebarProduct{
+    text-align: left;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    align-items: center;
+    height: 60px;
+    padding-inline: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.2s;
+    background-color: rgba(204, 228, 252, 0);
+    border-bottom: 1px solid rgba(78, 86, 95, 0.1);
+}
+.sidebarProduct .imgContainer {
+    background-color: white;
+    height: 45px;
+    border-radius: 5px;
+    padding-inline: 5px;
+    border: 1px solid rgba(78, 86, 95, 0.1);
+
+}
+.sidebarProduct .textContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.sidebarProduct:hover{
+    cursor: pointer;
+    background-color: rgba(204, 228, 252, 0.15);
+
+}
+.sidebarProductData {
+    font-size: 13px;
+    display: flex;
+    gap: 5px;
+    
+}
+.sidebarProductData {
+    color: #3c4248;
+    font-weight: 400;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+.sidebarProductData b {
+    font-weight: 600;
+    color: #4e565fd5#4e565f;
+}

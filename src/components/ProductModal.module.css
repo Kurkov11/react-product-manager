@@ -1,0 +1,152 @@
+.modal {
+    width: calc(100vw - 60px);
+    height: calc(100vh - 60px);
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    padding: 0;
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.modal[open] {
+    animation: fadein 0.15s ease-in forwards;
+}
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+.modal[open]::backdrop {
+    
+    animation: fadein 0.15s ease-in forwards;
+}
+@keyframes fadein{
+    0%{
+      opacity:0;
+      transform: translateY(-50px);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+    100%{
+      opacity:1;
+    }
+  }
+
+
+.topBar {
+    border-bottom: 1px solid rgba(78, 86, 95, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.topBarTitle {
+    font-size: 14px;
+
+}
+.mainContent {
+    max-width: 800px;
+    margin-inline: auto;
+    margin-top: 60px;
+}
+.input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.input input {
+    font-size: 14px;
+    padding-left: 10px;
+    height: 35px;
+    border-radius: 3px;
+    outline: 2px solid transparent;
+    transition: all 0.2s;
+    border: 1px solid rgba(78, 86, 95, 0.4);
+}
+.input input:focus{
+    border-color: #2693FF4D;
+    outline: 2px solid #2692ffdf;
+}
+.inputLabel {
+    font-size: 10px;
+    margin-bottom: 6px;
+}
+.closeBtn {
+    position: absolute;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.closeBtn:hover{
+    cursor: pointer;
+}
+.closeBtn:hover img{
+    opacity: 1;
+}
+.closeBtn img {
+    width: 15px;
+    opacity: 0.5;
+    transition: all 0.2s;
+
+}
+
+.productImg {
+    height: 300px;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(calc(-50% - 50px));
+}
+
+.horizontalInputsContainer {
+    display: flex;
+    gap: 15px;
+}
+.inputContainerHalfWidth {
+    width: calc(50% - 7.5px);
+}
+.wagaGabarytowaInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: calc(25% - 10px);
+    position: relative;
+}
+.wagaGabarytowaInput img{
+   height: 20px;
+   display: block;
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translateY(-2px);
+}
+.wagaGabarytowaInput button {
+    font-size: 14px;
+    padding-left: 10px;
+    height: 35px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: 2px solid transparent;
+    transition: all 0.2s;
+    border: none;
+    max-width: 100%;
+    border: 1px solid rgba(78, 86, 95, 0.4);
+    border-radius: 3px;
+    text-align: left;
+}
+.wagaGabarytowaInput button:hover {
+    cursor: pointer;
+    background-color: rgba(204, 228, 252, 0.3);
+}
+.wagaGabarytowaInput img {
+    pointer-events: none;
+    transition: all 0.2s;
+    filter: none;
+}
+.wagaGabarytowaInput:has(button:hover) img  {
+    filter: invert(58%) sepia(39%) saturate(7484%) hue-rotate(193deg) brightness(102%) contrast(104%);
+}
